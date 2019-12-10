@@ -196,7 +196,6 @@
         <script>
             $(".buttona").click(function(){
             	$.getJSON('json/artikel.json',function (data){
-                    console.log("aaaa");
                     console.log(data);
                 	$.each(data,function (n, elem){
                         $('.row').append(`

@@ -1,0 +1,18 @@
+
+[
+	{
+		"foto"	:"img/chemistry-glassware-56a12a083df78cf772680235.jpg",
+		"judul"	:"Kimia",
+		"detail":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+	{
+		"foto"	:"img/file-20180226-140213-yox11e.jpg",
+		"judul"	:"Statistik",
+		"detail":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+	{
+		"foto"	:"img/desk.jpg",
+		"judul"	:"Komputer",
+		"detail":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+]

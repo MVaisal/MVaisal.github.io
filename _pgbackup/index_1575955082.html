@@ -147,10 +147,10 @@
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img alt="kimia" class="imgarticle" src="img/chemistry-glassware-56a12a083df78cf772680235.jpg">
+                        <img alt="kimia" style="width:100%" src="img/chemistry-glassware-56a12a083df78cf772680235.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Kimia</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <h1>Kimia</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                             <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
@@ -159,10 +159,10 @@
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img alt="matematika" class="imgarticle" src="img/file-20180226-140213-yox11e.jpg">
+                        <img alt="matematika" style="width:100%" src="img/file-20180226-140213-yox11e.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Statistik</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <h1>Statistik</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                             <a href="https://www.youtube.com/watch?v=zouPoc49xbk&list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
@@ -171,10 +171,10 @@
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img alt="komputer" class="imgarticle" src="img/desk.jpg">
+                        <img alt="komputer" style="width:100%" src="img/desk.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Komputer</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <h1>Komputer</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                             <a href="https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
@@ -182,9 +182,6 @@
                     </div>
                 </div>
             </div>
-            <button class="buttona" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 30px; font-size: 20px;">
-                <span>Load More</span>
-            </button>
         </div>
         <div class="footer">
             <h4>Copyright &copy 2019 Belajar Bersama. All Rights Reserved</h4>
@@ -192,27 +189,5 @@
         <script src="js/navbar.js"></script>
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script>
-            $(".buttona").click(function(){
-            	$.getJSON('json/artikel.json',function (data){
-                    console.log("aaaa");
-                    console.log(data);
-                	$.each(data,function (n, elem){
-                        $('.row').append(`
-                        	<div class="column">
-    							<div class="card">
-									<img class="imgarticle" src="`+elem['foto']+`">
-										<h1 class="judul">`+elem['judul']+`</h1>
-										<p class="article">`+elem['detail']+`</p>
-								</div>
-							</div>
-                        `);
-                    });
-                });
-            });
-             
-
-        </script>
     </body>
 </html>

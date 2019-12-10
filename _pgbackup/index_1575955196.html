@@ -193,26 +193,23 @@
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
         <script src="js/jquery.min.js"></script>
-        <script>
-            $(".buttona").click(function(){
-            	$.getJSON('json/artikel.json',function (data){
-                    console.log("aaaa");
-                    console.log(data);
-                	$.each(data,function (n, elem){
-                        $('.row').append(`
-                        	<div class="column">
+        <script>$(".load-data").click(function () {
+             $(".buttona").click(function{
+             
+             });
+             $.getJSON('Json/artikel.json', function (data) {
+                    console.log( data );                            
+                    $.each(data, function (n, elem) {
+                    console.log('foto '+elem['foto']+' - judul '+elem['judul']+' - detail '+elem['detail'])
+                          $('.daftar__artikel__all').append(`
+        					<div class="column">
     							<div class="card">
 									<img class="imgarticle" src="`+elem['foto']+`">
 										<h1 class="judul">`+elem['judul']+`</h1>
 										<p class="article">`+elem['detail']+`</p>
 								</div>
-							</div>
-                        `);
+							</div>`);
                     });
-                });
-            });
-             
-
         </script>
     </body>
 </html>
