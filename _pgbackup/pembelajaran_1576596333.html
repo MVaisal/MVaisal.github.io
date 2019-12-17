@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/popup.css">
         <link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-        <link rel="stylesheet" href="icon/css/all.css">
+        <link rel="stylesheet" href="css/all.css">
     </head>     
     <body> 
         <div class="topnav" id="myTopnav">
@@ -25,10 +25,9 @@
                             <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
                         </div>
                         <div class="container">
-                            <label for="duname">
+                            <label for="uname">
                                 <b>Username</b>
                             </label>
-                            <input type="text" placeholder="Masukkan Username" name="duname" required>
                             <label for="nmdep">
                                 <b>Nama Depan</b>
                             </label>
@@ -41,10 +40,10 @@
                                 <b>Email</b>
                             </label>
                             <input type="email" placeholder="Masukkan Email" name="email" required>
-                            <label for="dpsw">
+                            <label for="psw">
                                 <b>Password</b>
                             </label>
-                            <input type="password" placeholder="Masukkan Password" name="dpsw" required>
+                            <input type="password" placeholder="Masukkan Password" name="psw" required>
                             <label for="kel">
                                 <h4>Jenis Kelamin</h4>
                             </label>
@@ -69,7 +68,7 @@
                 </div>
                 <a href="#login" class="" onclick="document.getElementById('id01').style.display='block'" style="background-color: #4caf50; color: white;"><i class="fas fa-sign-in-alt"></i> Login</a>
                 <div id="id01" class="modal">
-                    <form class="modal-content animate" name="login" id="formmasukii" action="useradmin.html" method="post">
+                    <form class="modal-content animate" action="/action_page.php" method="post">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                             <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
@@ -78,12 +77,12 @@
                             <label for="uname">
                                 <b>Username</b>
                             </label>
-                            <input type="text" placeholder="Masukkan Username" id="uname">
+                            <input type="text" placeholder="Masukkan Username" name="uname" required>
                             <label for="psw">
                                 <b>Password</b>
                             </label>
-                            <input type="password" placeholder="Masukkan Password" id="psw">
-                            <button type="submit" id="btnmasuk">Login</button>
+                            <input type="password" placeholder="Masukkan Password" name="psw" required>
+                            <button type="submit">Login</button>
                             <label>
                                 <input type="checkbox" checked="checked" name="remember"> Remember me
                             </label>
@@ -96,63 +95,19 @@
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i> </a>
         </div>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img class="a" src="img/D565_25_012_0004_600.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img class="a" src="img/uejh-classroom-0002-16x9.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img class="a" src="img/hl-ilustrasi-bimbelbee-02_ratio-16x9.jpg">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-        <div class="page">
-            <div style="padding-left: 53px; padding-right: 53px;">
-                <h1 spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" data-medium-editor-editor-index="1" medium-editor-index="e65e747d-eaed-9482-373b-0446b26a8672" data-placeholder="Type your text" data-medium-focused="true">Belajarlah Dimana Saja dan Kapan Saja</h1> 
-                <p style="text-align: center; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit am</p>
-                <button class="buttona" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 30px; font-size: 20px;">
-                    <span>Learn More</span>
-                </button>
-            </div>
+        <div class="page" style="margin-top: 50px;">
+            <h1 style="margin-bottom: 50px;">Pembelajaran</h1>
             <hr/>
-            <div class="flex-container">
-                <div class="box">
-                    <h2>Terpercaya</h2>
-                    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-                </div>
-                <div class="box">
-                    <h2>Terkini</h2>
-                    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-                </div>
-                <div class="box">
-                    <h2>Terdepan</h2>
-                    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-                </div>
-                <div class="box">
-                    <h2>Termudah</h2>
-                    <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
-                </div>
-            </div>
-            <hr/>
-            <h1>Pelajaran Populer</h1>
+            <h1>Kimia</h1>
             <hr style="margin-bottom: 40px;"/>
             <div class="row">
                 <div class="column">
                     <div class="card">
-                        <img alt="kimia" class="imgarticle" src="img/chemistry-glassware-56a12a083df78cf772680235.jpg">
+                        <img alt="kimia" style="width:100%" src="img/chemistry-glassware-56a12a083df78cf772680235.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Kimia</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <a class="link" href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr" target="_blank">
+                            <h1>Dasar - Dasar Kimia</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
                         </div>
@@ -160,10 +115,10 @@
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img alt="matematika" class="imgarticle" src="img/file-20180226-140213-yox11e.jpg">
+                        <img alt="matematika" style="width:100%" src="img/file-20180226-140213-yox11e.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Statistik</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <h1>Perhitungan pada Kimia</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                             <a href="https://www.youtube.com/watch?v=zouPoc49xbk&list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
@@ -172,20 +127,60 @@
                 </div>
                 <div class="column">
                     <div class="card">
-                        <img alt="matematika" class="imgarticle" src="img/file-20180226-140213-yox11e.jpg">
+                        <img alt="komputer" style="width:100%" src="img/desk.jpg">
                         <div class="containerb">
-                            <h1 class="judul">Statistik</h1>
-                            <p class="article">Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <a href="https://www.youtube.com/watch?v=zouPoc49xbk&list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr" target="_blank">
+                            <h1>Teknologi pada Kimia</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <a href="https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo" target="_blank">
                                 <button class="button">Learn</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="buttona" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 30px; font-size: 20px;">
-                <span>Load More</span>
-            </button>
+        </div>
+        <div class="page">
+            <hr>
+            <h1>Statistik</h1>
+            <hr style="margin-bottom: 40px;">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img alt="kimia" style="width:100%" src="img/chemistry-glassware-56a12a083df78cf772680235.jpg">
+                        <div class="containerb">
+                            <h1>Statistik pada Kimia</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <a href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr" target="_blank">
+                                <button class="button">Learn</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img alt="matematika" style="width:100%" src="img/file-20180226-140213-yox11e.jpg">
+                        <div class="containerb">
+                            <h1>Matematika dasar</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <a href="https://www.youtube.com/watch?v=zouPoc49xbk&amp;list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr" target="_blank">
+                                <button class="button">Learn</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img alt="komputer" style="width:100%" src="img/desk.jpg">
+                        <div class="containerb">
+                            <h1>Matematika pada Komputer</h1>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <a href="https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo" target="_blank">
+                                <button class="button">Learn</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <h4>Copyright &copy 2019 Belajar Bersama. All Rights Reserved</h4>
@@ -193,45 +188,5 @@
         <script src="js/navbar.js"></script>
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/validation.js"></script>
-        <script>
-            $(".buttona").click(function(){
-                $.ajax({
-				url: "json/artikel.json",
-				type: 'GET',
-				dataType: 'json',
-				// data: { }
-				})
-				.done(function(hasil) {
-				console.log("success");
-				var gabung = "";
-				$.each(hasil, function(index, val) {
-					 gabung += `
-					 	<div class="column">
-    							<div class="card">
-									<img class="imgarticle" src="`+val.foto+`">
-										<div class="containerb">
-										<h1 class="judul">`+val.judul+`</h1>
-										<p class="article">`+val.detail+`</p>
-										<a href=`+val.link+`>
-										<button class="button">Learn</button>
-										</a>
-								</div>
-							</div>
-						</div>
-					 `;
-				});
-				$(".row").append(gabung);
-                })
-                .fail(function(message, err) {
-                    console.log("error");
-                    console.log(message);
-                    console.log(err);
-                });
-                
-            	
-            });
-        </script>
     </body>
 </html>

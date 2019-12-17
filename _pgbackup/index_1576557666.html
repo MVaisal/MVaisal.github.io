@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/popup.css">
         <link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-        <link rel="stylesheet" href="icon/css/all.css">
+        <link rel="stylesheet" href="css/all.css">
     </head>     
     <body> 
         <div class="topnav" id="myTopnav">
@@ -183,10 +183,10 @@
                     </div>
                 </div>
             </div>
-            <button class="buttona" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 30px; font-size: 20px;">
-                <span>Load More</span>
-            </button>
         </div>
+        <button class="buttona" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-bottom: 30px; font-size: 20px;">
+            <span>Load More</span>
+        </button>
         <div class="footer">
             <h4>Copyright &copy 2019 Belajar Bersama. All Rights Reserved</h4>
         </div>
@@ -194,7 +194,6 @@
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
         <script src="js/jquery.min.js"></script>
-        <script src="js/validation.js"></script>
         <script>
             $(".buttona").click(function(){
                 $.ajax({
@@ -232,6 +231,21 @@
                 
             	
             });
+        </script>
+        <script>
+        $("#formmasukii").submit(function(event) {
+         	event.preventDefault();
+            var uname = $("#uname").val();
+            var psw = $("#psw").val();
+            if ($.isEmptyObject(uname) || $.isEmptyObject(psw)){
+            alert("Harap check kembali username dan password");
+            } else  if (uname != "admin" && psw != "admin"){
+            	alert("password salah");
+            } else {
+                document.location.href = "useradmin.html";
+            
+            }
+        });
         </script>
     </body>
 </html>

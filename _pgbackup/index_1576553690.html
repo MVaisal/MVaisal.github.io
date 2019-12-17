@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/popup.css">
         <link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-        <link rel="stylesheet" href="icon/css/all.css">
+        <link rel="stylesheet" href="css/all.css">
     </head>     
     <body> 
         <div class="topnav" id="myTopnav">
@@ -25,10 +25,9 @@
                             <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
                         </div>
                         <div class="container">
-                            <label for="duname">
+                            <label for="uname">
                                 <b>Username</b>
                             </label>
-                            <input type="text" placeholder="Masukkan Username" name="duname" required>
                             <label for="nmdep">
                                 <b>Nama Depan</b>
                             </label>
@@ -41,10 +40,10 @@
                                 <b>Email</b>
                             </label>
                             <input type="email" placeholder="Masukkan Email" name="email" required>
-                            <label for="dpsw">
+                            <label for="psw">
                                 <b>Password</b>
                             </label>
-                            <input type="password" placeholder="Masukkan Password" name="dpsw" required>
+                            <input type="password" placeholder="Masukkan Password" name="psw" required>
                             <label for="kel">
                                 <h4>Jenis Kelamin</h4>
                             </label>
@@ -194,7 +193,6 @@
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
         <script src="js/jquery.min.js"></script>
-        <script src="js/validation.js"></script>
         <script>
             $(".buttona").click(function(){
                 $.ajax({
@@ -232,6 +230,20 @@
                 
             	
             });
+        </script>
+        <script>
+        $("#formmasukii").submit(function(event) {
+         	event.preventDefault();
+            var uname = $("input[name='uname']").val();
+            var psw = $("input[name='psw']").val();
+            if (uname == "" || psw == ""){
+            alert("Harap check kembali username dan password");
+            } else  if (uname == "admin" || psw == "admin"){
+            	document.location.href = "useradmin.html";
+            } else {
+            alert("password salah");
+            }
+        });
         </script>
     </body>
 </html>

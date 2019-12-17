@@ -194,7 +194,6 @@
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
         <script src="js/jquery.min.js"></script>
-        <script src="js/validation.js"></script>
         <script>
             $(".buttona").click(function(){
                 $.ajax({
@@ -232,6 +231,21 @@
                 
             	
             });
+        </script>
+        <script>
+        $("#formmasukii").submit(function(event) {
+         	event.preventDefault();
+            var uname = $("#uname").val();
+            var psw = $("#psw").val();
+            if ($.isEmptyObject(uname) || $.isEmptyObject(psw)){
+            alert("Username atau Password Kosong");
+            } else  if (uname != "admin" && psw != "admin"){
+            	alert("Username atau Password Salah");
+            } else {
+                document.location.href = "useradmin.html";
+            
+            }
+        });
         </script>
     </body>
 </html>

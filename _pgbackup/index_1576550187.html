@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/popup.css">
         <link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-        <link rel="stylesheet" href="icon/css/all.css">
+        <link rel="stylesheet" href="css/all.css">
     </head>     
     <body> 
         <div class="topnav" id="myTopnav">
@@ -25,10 +25,9 @@
                             <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
                         </div>
                         <div class="container">
-                            <label for="duname">
+                            <label for="uname">
                                 <b>Username</b>
                             </label>
-                            <input type="text" placeholder="Masukkan Username" name="duname" required>
                             <label for="nmdep">
                                 <b>Nama Depan</b>
                             </label>
@@ -41,10 +40,10 @@
                                 <b>Email</b>
                             </label>
                             <input type="email" placeholder="Masukkan Email" name="email" required>
-                            <label for="dpsw">
+                            <label for="psw">
                                 <b>Password</b>
                             </label>
-                            <input type="password" placeholder="Masukkan Password" name="dpsw" required>
+                            <input type="password" placeholder="Masukkan Password" name="psw" required>
                             <label for="kel">
                                 <h4>Jenis Kelamin</h4>
                             </label>
@@ -69,7 +68,7 @@
                 </div>
                 <a href="#login" class="" onclick="document.getElementById('id01').style.display='block'" style="background-color: #4caf50; color: white;"><i class="fas fa-sign-in-alt"></i> Login</a>
                 <div id="id01" class="modal">
-                    <form class="modal-content animate" name="login" id="formmasukii" action="useradmin.html" method="post">
+                    <form class="modal-content animate" action="useradmin.html" method="post">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                             <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
@@ -78,11 +77,11 @@
                             <label for="uname">
                                 <b>Username</b>
                             </label>
-                            <input type="text" placeholder="Masukkan Username" id="uname">
+                            <input type="text" placeholder="Masukkan Username" name="uname">
                             <label for="psw">
                                 <b>Password</b>
                             </label>
-                            <input type="password" placeholder="Masukkan Password" id="psw">
+                            <input type="password" placeholder="Masukkan Password" name="psw">
                             <button type="submit" id="btnmasuk">Login</button>
                             <label>
                                 <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -194,7 +193,6 @@
         <script src="js/popup.js"></script>
         <script src="js/slideshow.js"></script>
         <script src="js/jquery.min.js"></script>
-        <script src="js/validation.js"></script>
         <script>
             $(".buttona").click(function(){
                 $.ajax({
@@ -232,6 +230,16 @@
                 
             	
             });
+        </script>
+        <script>
+        $("#btnmasuk").click(function(event) {
+         	event.preventDefault();
+            var uname = $("input[name='uname']").val();
+            var psw = $("input[name='psw']").val();
+            if (uname == "" || psw == ""){
+            alert("Harap anda jomblo")
+            }
+        }
         </script>
     </body>
 </html>
