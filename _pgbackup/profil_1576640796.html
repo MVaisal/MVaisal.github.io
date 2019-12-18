@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Belajar Bareng - Tentang Kami</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+        <link rel="stylesheet" href="icon/css/all.css">
+    </head>     
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Belajar Bareng</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="pembelajaran.html"><i class="fas fa-book-open"></i> Pembelajaran</a>
+            <a href="about.html"><i class="fas fa-address-card"></i> Tentang Kami</a>
+            <a href="help.html"><i class="fas fa-question-circle"></i> Bantuan</a>
+            <div class="a">
+</div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i> </a>
+        </div>         
+        <div style="margin: 100px 80px;">
+            <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
+            <div class="row" style="margin-top: 50px;">
+                <div class="column" style="width: 60%; height: auto;">
+                    <div class="page">
+                        <h1>Profil</h1>
+                        <form action="/action_page.php">
+                            <label for="nama">Username</label>
+                            <input type="text" id="123" name="uname" placeholder="budisantoso">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Budi Santoso">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Budisantoso@msn.com">
+                            <label for="password">Password</label>
+                            <input type="password" id="pws" name="pws" placeholder="">
+                            <label for="kategori">Jenis Kelamin</label>
+                            <select id="kategori" name="kategori" disabled>
+                                <option value="laki">Laki - Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                            <button class="buttonb" id="edit">Edit
+</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h4>
+            Copyright &copy 2019 Belajar Bersama. All Rights Reserved</h4>
+        </div>
+        <script src="js/navbar.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script>
+               $(document).ready(function() {
+    var button = $('#123').prop("disabled", true);
+    $(button).prop('disabled', true);
+               });
+        </script>
+    </body>
+</html>

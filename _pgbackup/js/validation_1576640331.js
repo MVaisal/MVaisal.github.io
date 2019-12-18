@@ -5,7 +5,7 @@ $("#formmasukii").submit(function(event) {
             if ($.isEmptyObject(uname) || $.isEmptyObject(psw)){
             alert("Username atau Password Kosong");
             } else if (uname == "user" && psw == "user"){
-                document.location.href = "profil.html";
+                document.location.href = "useradmin.html";
             } else  if (uname != "admin" && psw != "admin"){
             	alert("Username atau Password Salah");
             }else {

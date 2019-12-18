@@ -96,32 +96,28 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i> </a>
         </div>         
         <div style="margin: 100px 80px;">
-            <h1>Team</h1>
-            <hr style="border-style: solid; border-width: 2px; border-color: #c4c4c4;"/>
-            <h2 style="text-align: center; color: #c4c4c4;">Kelompok 3</h2>
-            <div class="row">
-                <div class="column" style="width: 45%;">
-                    <div class="card">
-                        <img alt="faisal" style="width: 100%; border-radius: 50;" src="img/male.jpg">
-                        <div class="containerb">
-                            <h2>Muhammad Faisal</h2>
-                            <p class="title">162410101093</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>22.m.faisal@gmail.com</p>
-                            <p><button class="button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column" style="float: right; width: 45%;">
-                    <div class="card">
-                        <img alt="ayu" style="width: 100%;" src="img/female.jpg">
-                        <div class="containerb">
-                            <h2>Destry Ayu</h2>
-                            <p class="title">162410101037</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>example@example.com</p>
-                            <p><button class="button">Contact</button></p>
-                        </div>
+            <img alt="Avatar" class="avatar" src="img/facebook-default-no-profile-pic1.jpg">
+            <div class="row" style="margin-top: 50px;">
+                <div class="column" style="width: 60%; height: auto;">
+                    <div class="page">
+                        <h1>Profil</h1>
+                        <form action="/action_page.php">
+                            <label for="nama">Username</label>
+                            <input type="text" id="Button" name="uname" placeholder="budisantoso">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Budi Santoso">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Budisantoso@msn.com">
+                            <label for="password">Password</label>
+                            <input type="password" id="pws" name="pws" placeholder="">
+                            <label for="kategori">Jenis Kelamin</label>
+                            <select id="kategori" name="kategori" disabled>
+                                <option value="laki">Laki - Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                            <button class="buttonb" id="edit">Edit
+</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -134,5 +130,10 @@
         <script src="js/popup.js"></script>
         <script src="js/validation.js"></script>
         <script src="js/jquery.min.js"></script>
+        <script>
+               $(document).ready(function() {
+    var button = $('#uname');
+    $(button).prop('disabled', true);
+        </script>
     </body>
 </html>
