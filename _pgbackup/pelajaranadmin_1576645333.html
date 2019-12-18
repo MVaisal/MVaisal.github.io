@@ -23,7 +23,6 @@
         <div style="margin: 70px 10%;">
             <h1>Daftar Pelajaran</h1>
             <table class="tabel">
-                <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nama Pelajaran</th>
@@ -33,15 +32,13 @@
                     <th>Deskripsi</th>
                     <th>Edit/Hapus Pelajaran</th>
                 </tr>
-                </thead>
-            <tbody>
                 <tr>
                     <td>1</td>
                     <td>Hidrogen</td>
                     <td>Kimia</td>
                     <td>Youtube.com/asdas</td>
                     <td>
-                    <img src="img/chemistry-glassware-56a12a083df78cf772680235.jpg"/>
+                        <img src="img/chemistry-glassware-56a12a083df78cf772680235.jpg"/>
                     </td>
                     <td>ini hidrogen</td>
                     <td>
@@ -79,14 +76,13 @@
                         <button onclick="document.getElementById('id04').style.display='block'" class="buttonb">Edit
 </button>
                     </td>
-                </tr>
-                </tbody>                 
+                </tr>                 
             </table>
             <button onclick="document.getElementById('id03').style.display='block'" style="width: 150px; position: fixed; bottom: 70px; right: 5%; border: 1px solid green;" class="buttonb">
                 <i class="far fa-plus-square"></i> Tambah
             </button>
             <div id="id03" class="modal">
-                <form class="modal-content animate" action="javascript:void(0);" method="post">
+                <form class="modal-content animate" action="/action_page.php" method="post">
                     <div class="imgcontainer">
                         <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
                     </div>
@@ -94,25 +90,24 @@
                         <label for="pelajaran">
                             <b>Nama Pelajaran</b>
                         </label>
-                        <input type="text" id="nama" placeholder="Masukkan nama pelajaran" name="pelajaran" required>
+                        <input type="text" placeholder="Masukkan nama pelajaran" name="pelajaran" required>
                         <label for="kat">
                             <b>Kategori</b>
                         </label>
-                        <input type="text" id="kat" placeholder="Masukkan kategori" name="kat" required>
+                        <input type="text" placeholder="Masukkan kategori" name="kat" required>
                         <label for="link">
                             <b>Link</b>
-                            <input type="text" id="link" placeholder="Masukkan link pelajaran" name="kat" required>
+                            <input type="text" placeholder="Masukkan link pelajaran" name="kat" required>
                         </label>
                         <label for="desc">
                             <b>Deskripsi</b>
                         </label>
-                        <input type="text" id="desc" placeholder="Masukkan deskripsi" name="desc" required>
+                        <input type="text" placeholder="Masukkan deskripsi" name="desc" required>
                         <label for="img">
                             <b>Thumbnail</b>
-                            <input type="file" id="foto" name="img" required>
-                            <img id="imga" src="#" style="max-width: 50px">
+                            <input type="file" name="img" required>
                         </label>
-                        <button class="buttond" id="btn" type="submit">Tambah</button>
+                        <button type="submit">Tambah</button>
                     </div>
                     <div class="container" style="background-color:#f1f1f1">
                         <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
@@ -145,7 +140,7 @@
                             <b>Thumbnail</b>
                             <input type="file" name="img" required>
                         </label>
-                        <button class="button" type="submit">Edit</button>
+                        <button type="submit">Edit</button>
                     </div>
                     <div class="container" style="background-color:#f1f1f1">
                         <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
@@ -159,33 +154,10 @@
         </div>
         <script src="js/navbar.js"></script>
         <script src="js/popup.js"></script>
-        <script src="js/jquery.min.js"></script>
         <script>
-            $(document).ready(function(){
-                $(".buttonc").click(function(){
-                $(this).parents('tr').remove();
-				});
-
-
-                $("#btn").click(function(){
-                    console.log(this);
-                    var nama = $("#nama").val();
-                    var kat = $("#kat").val();
-                    var link = $("#link").val();
-                    var desc = $("#desc").val();
-                    var foto = $("#foto").val().split('\\').pop();
-                    var markup = `<tr><td></td><td>`+ nama +`</td><td>`+ kat +`</td><td>`+ link +`</td><td>`+ `<img src="img/` +foto +`"/></td><td>`+ desc +`</td><td>
-                        <button class="buttonc">Hapus</button>
-                        <button onclick="document.getElementById('id04').style.display='block'" class="buttonb">Edit
-</button>
-                    </td></tr>`;
-                    $("table tbody").append(markup);
-                })
-                $("#foto").change(function(){
-                    foto = $(this).val().split('\\').pop();
-                    $("#imga").attr('src', 'img/' + foto)
-                })
-            })
+            $(".buttonc").click(function()){
+            	$(this).parents('tr').remove();
+            });
         </script>
     </body>
 </html>
